@@ -56,3 +56,7 @@ C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\obj\Debug\net5.0\ref\Bitb
 C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\obj\Debug\net5.0\BitbyBitBlog.pdb
 C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\obj\Debug\net5.0\BitbyBitBlog.genruntimeconfig.cache
 C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\obj\Debug\net5.0\BitbyBitBlog.csproj.CopyComplete
+C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\obj\Debug\net5.0\RazorDeclaration\Pages\AboutMe.razor.g.cs
+C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\obj\Debug\net5.0\Razor\Pages\AboutMe.razor.g.cs
+C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\obj\Debug\net5.0\RazorDeclaration\Pages\Blog.razor.g.cs
+C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\obj\Debug\net5.0\Razor\Pages\Blog.razor.g.cs

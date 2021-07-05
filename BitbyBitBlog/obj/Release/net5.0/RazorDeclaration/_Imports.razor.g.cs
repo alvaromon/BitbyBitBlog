@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BitbyBitBlog.Shared
+namespace BitbyBitBlog
 {
     #line hidden
     using System;
@@ -82,28 +82,13 @@ using BitbyBitBlog.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class _Imports : System.Object
     {
         #pragma warning disable 1998
-        protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
+        protected void Execute()
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 38 "C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\Shared\NavMenu.razor"
-       
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591

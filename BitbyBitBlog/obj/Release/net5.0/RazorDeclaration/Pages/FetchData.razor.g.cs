@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BitbyBitBlog.Shared
+namespace BitbyBitBlog.Pages
 {
     #line hidden
     using System;
@@ -82,7 +82,15 @@ using BitbyBitBlog.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 3 "C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\Pages\FetchData.razor"
+using BitbyBitBlog.Data;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
+    public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,20 +98,19 @@ using BitbyBitBlog.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\Shared\NavMenu.razor"
+#line 39 "C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\Pages\FetchData.razor"
        
-    private bool collapseNavMenu = true;
+    private WeatherForecast[] forecasts;
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    protected override async Task OnInitializedAsync()
     {
-        collapseNavMenu = !collapseNavMenu;
+        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private WeatherForecastService ForecastService { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -82,7 +82,7 @@ using BitbyBitBlog.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class SurveyPrompt : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,16 +90,11 @@ using BitbyBitBlog.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\Shared\NavMenu.razor"
+#line 12 "C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\Shared\SurveyPrompt.razor"
        
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+    // Demonstrates how a parent component can supply parameters
+    [Parameter]
+    public string Title { get; set; }
 
 #line default
 #line hidden

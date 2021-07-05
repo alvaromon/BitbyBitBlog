@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BitbyBitBlog.Shared
+namespace BitbyBitBlog.Pages
 {
     #line hidden
     using System;
@@ -82,7 +82,8 @@ using BitbyBitBlog.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
+    public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,15 +91,13 @@ using BitbyBitBlog.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\Shared\NavMenu.razor"
+#line 9 "C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\Pages\Counter.razor"
        
-    private bool collapseNavMenu = true;
+    private int currentCount = 0;
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    private void IncrementCount()
     {
-        collapseNavMenu = !collapseNavMenu;
+        currentCount++;
     }
 
 #line default
