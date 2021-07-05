@@ -2,7 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/BlazorApp1/obj/Container
 /BitbyBitBlog/bin/Debug/net5.0
 .vs/
-/BitbyBitBlog/obj/Container
+/BitbyBitBlog/obj
