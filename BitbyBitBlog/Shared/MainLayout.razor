@@ -1,6 +1,18 @@
 ﻿@inherits LayoutComponentBase
 
-<MudBlazor.MudLayout>
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <div class="main">
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>
+</div>
+
+@*<MudLayout>
     <div class="page">
         <div class="sidebar">
             <NavMenu />
@@ -8,8 +20,15 @@
 
         <div class="main">
             <div class="content px-4">
-                @Body
+                <MudMainContent>
+                    <MudPaper>
+                        @Body
+                    </MudPaper>
+                </MudMainContent>
             </div>
         </div>
     </div>
-</MudBlazor.MudLayout>
+</MudLayout>
+<button @onclick="@(async _ => await ToggleThemeAsync())"> HELLLOWROJKAVDF </button>
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_currentTheme" />
+<MudThemeProvider Theme="_currentTheme" />*@

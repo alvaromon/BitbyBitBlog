@@ -1,7 +1,8 @@
-﻿.previewContainer {
-}
-
-img {
+﻿img {
     float: left;
     margin: 10px;
+}
+
+.previewContainer {
+    overflow: hidden
 }

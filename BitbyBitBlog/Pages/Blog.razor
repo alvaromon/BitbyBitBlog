@@ -4,16 +4,9 @@
 <h3>Blog</h3>
 
 <div class="blogPosts">
-    <BlogPostPreview>
-
-    </BlogPostPreview>
-    <BlogPostPreview>
-
-    </BlogPostPreview>
-    <BlogPostPreview>
-
-    </BlogPostPreview>
-    <BlogPostPreview>
-
-    </BlogPostPreview>
+    @foreach(BlogPostPreview preview in blogPostPreviews)
+    {
+        <BlogPostPreview ImageFilePath="@preview.ImageFilePath" BlogPostPreviewText="@preview.BlogPostPreviewText">
+        </BlogPostPreview>
+    }
 </div>
