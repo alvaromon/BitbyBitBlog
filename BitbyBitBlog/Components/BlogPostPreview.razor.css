@@ -4,5 +4,9 @@
 }
 
 .previewContainer {
-    overflow: hidden
+    overflow: hidden;
+}
+
+.blogPreviewTextContainter {
+    padding-top: 50px;
 }

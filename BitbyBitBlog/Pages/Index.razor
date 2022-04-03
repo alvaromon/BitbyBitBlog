@@ -1,10 +1,98 @@
 ﻿@page "/"
-@using MudBlazor
+@using BitbyBitBlog.Components
+@using BlazorTypewriter;
+
+<div class="clearfix">
+    <img class="logo" src="../Images/Alvaro_logo.png" style="width: 850px; height: 850px;"/>
+    <div class="helloTextContainer">
+        <h1 class="surroundingTitle">Hi there, I'm</h1>
+        <h1 class="nameTitle">Alvaro Montoya</h1>
+        <h1 class="surroundingTitle, bottomTitle">
+            <Typewriter Builder="@typewriter" />
+        </h1>
+    </div>
+</div>
 
 
-<h1>Hello, world!</h1>
-Welcome to your new app.
+<MudDivider />
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<h1 class="latestPostTitle"> Latest Post</h1>
+<LatestBlogPostPreview></LatestBlogPostPreview>
+
+<MudDivider />
+
+<MudCarousel Class="mud-width-full" Style="height:500px;" ShowArrows="@arrows" ShowBullets="@bullets" AutoCycle="@autocycle" TData="object">
+    <MudCarouselItem>
+        <div class="carouselContent">
+            <h1 class="carouselTitle">Object-Oriented Languages</h1>
+            <span>
+                <img src="../Images/c-sharp-logo.png" width="250" height="250"/>
+                <img src="../Images/C++_Logo.svg.png" width="200" height="220"/>
+                <img src="../Images/java-logo.png" width="200" height="250"/>
+            </span>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem>
+        <div class="carouselContent">
+            <h1 class="carouselTitle">Frontend Frameworks</h1>
+            <span>
+                <img src="../Images/Blazor-logo.png" width="220" height="250"/>
+                <img src="../Images/AngularJS-logo.svg" width="300" height="250"/>
+            </span>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem>
+        <div class="carouselContent">
+            <h1 class="carouselTitle">Databases</h1>
+            <span>
+                <img src="../Images/sql-server-management-studio-logo.png" width="300" height="250"/>
+                <img src="../Images/Entity-framework-logo.png" width="350" height="250"/>
+            </span>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem>
+        <div class="carouselContent">
+            <h1 class="carouselTitle">Cloud</h1>
+            <span>
+                <img src="../Images/azure-logo.png" width="300" height="250"/>
+                <img src="../Images/aws-logo.png" width="250" height="200"/>
+            </span>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem>
+        <div class="carouselContent">
+            <h1 class="carouselTitle">DevOps</h1>
+            <span>
+                <img src="../Images/azure-devops-logo.png" width="400" height="250"/>
+                <img src="../Images/bamboo-logo.png" width="500" height="175"/>
+            </span>
+        </div>
+    </MudCarouselItem>
+</MudCarousel>
+
 <SocialMedia></SocialMedia>
+
+@code
+{
+    private bool arrows = true;
+    private bool bullets = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
+
+    TypewriterBuilder typewriter = new TypewriterBuilder(defaultCharacterPause: 50)
+        .TypeString("Software Development Lead")
+        .Pause(1000)
+        .DeleteAll()
+        .TypeString("Computer Engineer", 50)
+        .Pause(500)
+        .DeleteAll(30)
+        .TypeString("DevOps Engineer", 50)
+        .Pause(500)
+        .DeleteAll(30)
+        .TypeString("Technical Writer", 50)
+        .Pause(500)
+        .DeleteAll(20)
+        .Pause(500)
+        .Loop();
+}
 

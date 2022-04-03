@@ -1,0 +1,45 @@
+﻿.clearfix {
+    overflow: auto;
+    margin-bottom: 15px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.latestPostTitle {
+    text-align: center;
+}
+
+.carouselTitle {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.carouselContent {
+    text-align: center;
+}
+
+.logo {
+    float: left;
+    margin-right: 150px;
+}
+
+.helloTextContainer {
+    padding-top: 330px;
+}
+
+.nameTitle {
+    font-size: 80px;
+}
+
+.surroundingTitle {
+    font-size: 40px;
+}
+
+.bottomTitle {
+    color: #5d2b90;
+    font-weight: bold;
+}

@@ -1,8 +1,14 @@
-﻿<div class="previewContainer">
+﻿<div class="previewContainer" >
     <img src="@ImageFilePath" width="200" height="200">
-    <p>
-        @BlogPostPreviewText
-    </p>
+    <div class="blogPreviewTextContainter">
+        <h2>
+            <a href="blog/@Id">@Title</a>
+        </h2>
+        <p>
+            @BlogPostPreviewText
+        </p>
+    </div>
+   
 </div>
 
 @code {

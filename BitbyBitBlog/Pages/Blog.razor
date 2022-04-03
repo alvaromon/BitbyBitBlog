@@ -1,12 +1,44 @@
 ﻿@page "/blog"
 @using BitbyBitBlog.Components;
+@using BitbyBitBlog.Models
 
 <h3>Blog</h3>
 
 <div class="blogPosts">
-    @foreach(BlogPostPreview preview in blogPostPreviews)
+    @foreach(BlogPost preview in blogPostPreviews)
     {
-        <BlogPostPreview ImageFilePath="@preview.ImageFilePath" BlogPostPreviewText="@preview.BlogPostPreviewText">
-        </BlogPostPreview>
+        <div>
+            <BlogPostPreview Id="@preview.Id" 
+                         Title="@preview.Title" 
+                         ImageFilePath="@preview.BlogPostPreview.ImageFilePath" 
+                         BlogPostPreviewText="@preview.BlogPostPreview.BlogPostPreviewText">
+            </BlogPostPreview>
+            <BlogPostPreview Id="@preview.Id" 
+                         Title="@preview.Title" 
+                         ImageFilePath="@preview.BlogPostPreview.ImageFilePath" 
+                         BlogPostPreviewText="@preview.BlogPostPreview.BlogPostPreviewText">
+            </BlogPostPreview>
+            <BlogPostPreview Id="@preview.Id" 
+                         Title="@preview.Title" 
+                         ImageFilePath="@preview.BlogPostPreview.ImageFilePath" 
+                         BlogPostPreviewText="@preview.BlogPostPreview.BlogPostPreviewText">
+            </BlogPostPreview>
+            <BlogPostPreview Id="@preview.Id" 
+                         Title="@preview.Title" 
+                         ImageFilePath="@preview.BlogPostPreview.ImageFilePath" 
+                         BlogPostPreviewText="@preview.BlogPostPreview.BlogPostPreviewText">
+            </BlogPostPreview>
+            <BlogPostPreview Id="@preview.Id" 
+                         Title="@preview.Title" 
+                         ImageFilePath="@preview.BlogPostPreview.ImageFilePath" 
+                         BlogPostPreviewText="@preview.BlogPostPreview.BlogPostPreviewText">
+            </BlogPostPreview>
+            <BlogPostPreview Id="@preview.Id" 
+                         Title="@preview.Title" 
+                         ImageFilePath="@preview.BlogPostPreview.ImageFilePath" 
+                         BlogPostPreviewText="@preview.BlogPostPreview.BlogPostPreviewText">
+            </BlogPostPreview>
+        </div>
+
     }
 </div>

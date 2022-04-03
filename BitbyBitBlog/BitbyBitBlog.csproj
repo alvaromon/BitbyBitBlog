@@ -15,13 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BlazorTypewriter" Version="1.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
     <PackageReference Include="MudBlazor" Version="6.0.6" />
+    <PackageReference Include="MudBlazor.Markdown" Version="0.0.8" />
     <PackageReference Include="MudBlazor.ThemeManager" Version="1.0.5" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
   <ItemGroup>
