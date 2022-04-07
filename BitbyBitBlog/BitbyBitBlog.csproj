@@ -9,6 +9,8 @@
   <ItemGroup>
     <Content Remove="wwwroot\Content\Alvaro Resume 2022.pdf" />
   </ItemGroup>
+	
+	
 
   <ItemGroup>
     <None Remove="Components\BlogPostPreview.razor.css" />
@@ -47,5 +49,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+
+	<ItemGroup>
+		<Content Update="wwwroot\_redirects">
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
 
 </Project>
