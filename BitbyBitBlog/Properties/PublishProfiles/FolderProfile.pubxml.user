@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Alvaro\source\repos\BitbyBitBlog\BitbyBitBlog\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2022-04-07T04:05:48.4326499Z;True|2022-04-07T00:05:15.4123740-04:00;False|2022-04-07T00:02:10.5854867-04:00;False|2022-04-07T00:00:26.7824274-04:00;False|2022-04-06T23:53:58.7558226-04:00;True|2022-04-05T22:47:31.9072163-04:00;True|2022-04-05T22:46:37.5377632-04:00;True|2022-04-05T22:44:03.5068793-04:00;True|2022-04-05T22:43:31.9904068-04:00;</History>
+  </PropertyGroup>
+</Project>

@@ -2,9 +2,13 @@
 ## To Do
 - Blog Post Page(s)
     - BlogPostDataService registered with DI container
+
+- Write 3 blog posts
+
+- Look into CDN for all images
+
 - Remove double title from blogpostpreviewmodel
 - Home Page
-    - latest post,
     - image/text scale with screen size
 
 - Add Resume download

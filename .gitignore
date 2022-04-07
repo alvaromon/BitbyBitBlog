@@ -6,3 +6,5 @@
 .vs/
 /BitbyBitBlog/obj
 /BitbyBitBlog/bin/Debug/net6.0
+/BitbyBitBlog/.config
+/BitbyBitBlog/bin/Release/net6.0

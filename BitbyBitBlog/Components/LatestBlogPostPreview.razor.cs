@@ -1,24 +1,26 @@
 ﻿using BitbyBitBlog.Models;
-using BitbyBitBlog.Services.BlogPostDataService;
-using System.IO;
 using System.Linq;
+using System.Net.Http.Json;
+using System.Threading.Tasks;
 
 namespace BitbyBitBlog.Components
 {
     public partial class LatestBlogPostPreview
     {
-        private BlogPostPreviewModel preview;
-        private BlogPost blog;
+        public BlogPostPreviewModel Preview { get; set; } = new();
+        public BlogPost Blog { get; set; } = new();
 
-        protected override void OnInitialized() 
+
+        protected override async Task OnInitializedAsync()
         {
-            // read all files in Content folder
-            var directory = new DirectoryInfo("Content/");
-            var latestFile = directory.GetFiles().OrderByDescending(f => f.LastWriteTime).First();
+            //TODO: use BlogPostDataService
 
-            blog = new BlogPostDataService(latestFile.FullName).Read();
+            var files = await _client.GetFromJsonAsync<BlogToReadModel>("Content/BlogsToRead.json");
 
-            preview = blog.BlogPostPreview;
+            var latestBlog = files.blogs.Last();
+
+            Blog = await _client.GetFromJsonAsync<BlogPost>($"Content/{latestBlog}");
+            Preview = Blog.BlogPostPreview;
         }
     }
 }

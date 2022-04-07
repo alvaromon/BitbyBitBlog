@@ -1,6 +1,7 @@
 ﻿using BitbyBitBlog.Models;
 using System;
 using System.IO;
+using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 
@@ -11,7 +12,7 @@ namespace BitbyBitBlog.Services.BlogPostDataService
         private readonly string _filePath;
 
         // Constructor
-        public BlogPostDataService(string filePath)
+        public BlogPostDataService(HttpClient client, string filePath)
         {
             _filePath = filePath ?? throw new ArgumentNullException(nameof(filePath));
         }
@@ -20,6 +21,11 @@ namespace BitbyBitBlog.Services.BlogPostDataService
         {
             var jsonString = File.ReadAllText(_filePath);
             
+            return JsonSerializer.Deserialize<BlogPost>(jsonString);
+        }
+
+        public static BlogPost Read(string jsonString)
+        {
             return JsonSerializer.Deserialize<BlogPost>(jsonString);
         }
     }

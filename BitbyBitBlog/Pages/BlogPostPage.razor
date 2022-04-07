@@ -1,4 +1,6 @@
 ﻿@page "/blog/{id:int}"
 @using BitbyBitBlog.Components
 
+@inject HttpClient _client;
+
 <BlogPostComponent BlogPost="@BlogPost"></BlogPostComponent>
