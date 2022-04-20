@@ -1,4 +1,5 @@
-﻿## Action and Func Delegates in C#<br/><font size="1"> ***Written by: Alvaro Montoya | Alvaro.montoya@knights.ucf.edu*** </font> 
+﻿## Action and Func Delegates in C#
+<font size="1"> ***Written by: Alvaro Montoya | Alvaro.montoya@knights.ucf.edu*** </font> 
 
 `Action` and `Func` delegates are used in our .NET code more often than we might think. They are not meant to confuse us as much as the IntelliSense function signature preview window might lead us to believe. So let's learn more about how and when to use these built-in delegates in this article.
 ### Action and Func Delegates
@@ -83,7 +84,7 @@ Delegates can be assigned functions to encapsulate by just passing the function 
 var reporter = ReportProfits;
 
 // previously
-//var reporter = new Action<double, double>(ReportProfits);
+// var reporter = new Action<double, double>(ReportProfits);
 ```
 Secondly, the `Invoke()` function is an alternative for calling delegates. This is the same as just using () after the delegates name as we have already seen used. Using the Invoke() function may be preferable so that we may offer the reader of our code a sure signal that a delegate is being called. Invoke will take in the parameters the delegate requires:
 ```C#
