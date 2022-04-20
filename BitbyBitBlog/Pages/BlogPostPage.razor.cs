@@ -2,6 +2,7 @@
 using BitbyBitBlog.Services.BlogPostDataService;
 using Microsoft.AspNetCore.Components;
 using System.IO;
+using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 
@@ -11,7 +12,11 @@ namespace BitbyBitBlog.Pages
     {
         [Parameter]
         public int Id { get; set; }
-        public BlogPost BlogPost { get; set; }
+        public BlogPost BlogPost { get; set; } = new();
+
+        [Inject]
+        private HttpClient _client { get; set; }
+
 
         protected async override Task OnInitializedAsync()
         {

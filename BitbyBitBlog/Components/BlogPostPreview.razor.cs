@@ -1,7 +1,4 @@
 ﻿using Microsoft.AspNetCore.Components;
-using BitbyBitBlog.Services.BlogPostDataService;
-using System.IO;
-using BitbyBitBlog.Models;
 
 namespace BitbyBitBlog.Components
 {

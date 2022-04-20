@@ -10,6 +10,8 @@ using System.Net.Http;
 using MudBlazor;
 using MudBlazor.Services;
 using Microsoft.AspNetCore.Components.Web;
+using BitbyBitBlog.Services.BlogPostDataService;
+using BitbyBitBlog.Services.FileService;
 
 namespace BitbyBitBlog
 {
@@ -22,6 +24,8 @@ namespace BitbyBitBlog
             builder.RootComponents.Add<HeadOutlet>("head::after");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddScoped<BlogPostDataService>();
+            builder.Services.AddScoped<FileService>();
             builder.Services.AddMudServices();
             builder.Services.AddMudMarkdownServices();
 

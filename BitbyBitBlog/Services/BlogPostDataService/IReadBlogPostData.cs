@@ -1,9 +1,10 @@
 ﻿using BitbyBitBlog.Models;
+using System.Threading.Tasks;
 
 namespace BitbyBitBlog.Services
 {
     public interface IReadBlogPostData
     {
-        public BlogPost Read();
+        public Task<BlogPost> ReadAsync(string fileName);
     }
 }

@@ -26,7 +26,7 @@
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink @onclick="DownloadFile" class="nav-link" href="">
+            <NavLink @onclick="DownloadFile" class="nav-link">
                 <span class="oi oi-cloud-download" aria-hidden="true"></span> Resume
             </NavLink>
         </li>
@@ -38,13 +38,17 @@
 
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
+    [Inject]
+    private FileService fileService { get; set; }
+
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
     }
 
-    private async Task DownloadFile() {
+    private async Task DownloadFile() 
+    {
         var resumePath = "Content/Alvaro Resume 2022.pdf";
-        await FileService.SaveAsAsync(js, resumePath);
+        await fileService.SaveAsAsync(js, resumePath);
     }
 }

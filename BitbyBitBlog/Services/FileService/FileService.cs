@@ -2,15 +2,26 @@
 using Microsoft.JSInterop;
 using System.Threading.Tasks;
 using System.IO;
+using System.Net.Http;
+using Microsoft.AspNetCore.Components;
 
 namespace BitbyBitBlog.Services.FileService
 {
-    public static class FileService
+    public class FileService
     {
-        public async static Task SaveAsAsync(IJSRuntime js, string filePath)
+        [Inject]
+        private HttpClient _client { get; set; }
+
+        // Constructor
+        public FileService(HttpClient client)
         {
-            var bytes = File.ReadAllBytes(filePath);
-            await js.InvokeAsync<object>("saveAsFile", new FileInfo(filePath).Name, Convert.ToBase64String(bytes));
+            _client = client ?? throw new ArgumentNullException(nameof(client));
+        }
+
+        public async Task SaveAsAsync(IJSRuntime js, string filePath)
+        {
+            var bytes = await _client.GetByteArrayAsync(filePath);
+            await js.InvokeAsync<object>("saveAsFile", Path.GetFileName(filePath), Convert.ToBase64String(bytes));
         }
     }
 }

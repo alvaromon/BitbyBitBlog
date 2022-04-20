@@ -1,11 +1,5 @@
-﻿@inject HttpClient _client;
-
-<BlogPostPreview ImageFilePath="@(Preview.ImageFilePath ?? "../Image/noimage.png")" 
-                 Title="@(Preview.Title ?? "Mary Had A Little Lamb")" 
-                 BlogPostPreviewText="@(Preview.BlogPostPreviewText ?? "bopoboo")" 
-                 Id="@(Blog.Id > 0 ? 12 : 1)">
+﻿<BlogPostPreview ImageFilePath="@(Preview.ImageFilePath ?? "../Image/noimage.png")" 
+                 Title="@(Preview.Title ?? "ERROR")" 
+                 BlogPostPreviewText="@(Preview.BlogPostPreviewText ?? "text")" 
+                 Id="@(Blog.Id > 0 ? Blog.Id : -1)">
 </BlogPostPreview>
-
-@code 
-{
-}

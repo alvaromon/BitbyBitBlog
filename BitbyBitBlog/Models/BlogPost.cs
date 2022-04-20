@@ -14,6 +14,6 @@ namespace BitbyBitBlog.Models
         [JsonPropertyName("Images")]
         public List<string> Images { get; set; } = new List<string>();
         [JsonPropertyName("BlogPostPreview")]
-        public BlogPostPreviewModel BlogPostPreview { get; set; } = default;
+        public BlogPostPreviewModel BlogPostPreview { get; set; } = new();
     }
 }

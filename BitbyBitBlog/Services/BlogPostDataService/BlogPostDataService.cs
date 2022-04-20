@@ -2,31 +2,33 @@
 using System;
 using System.IO;
 using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace BitbyBitBlog.Services.BlogPostDataService
 {
     public class BlogPostDataService : IReadBlogPostData
     {
-        private readonly string _filePath;
+        private readonly HttpClient _client;
+
+        public BlogToReadModel BlogsToRead { get; set; }
 
         // Constructor
-        public BlogPostDataService(HttpClient client, string filePath)
+        public BlogPostDataService(HttpClient client)
         {
-            _filePath = filePath ?? throw new ArgumentNullException(nameof(filePath));
+            _client = client ?? throw new ArgumentNullException(nameof(client));
         }
 
-        public BlogPost Read() 
+        public async Task<BlogPost> ReadAsync(string fileName) 
         {
-            var jsonString = File.ReadAllText(_filePath);
-            
-            return JsonSerializer.Deserialize<BlogPost>(jsonString);
+            return await _client.GetFromJsonAsync<BlogPost>($"Content/{fileName}");
         }
 
-        public static BlogPost Read(string jsonString)
+        public async Task Initialize()
         {
-            return JsonSerializer.Deserialize<BlogPost>(jsonString);
+            BlogsToRead = await _client.GetFromJsonAsync<BlogToReadModel>("Content/BlogsToRead.json");
         }
     }
 }

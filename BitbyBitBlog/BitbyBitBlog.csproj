@@ -1,16 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <UserSecretsId>5356d3b4-d0ea-4738-843f-cadcc6dd2f70</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Remove="wwwroot\Content\Alvaro Resume 2022.pdf" />
-  </ItemGroup>
-	
-	
 
   <ItemGroup>
     <None Remove="Components\BlogPostPreview.razor.css" />
@@ -43,17 +37,15 @@
     <None Include="wwwroot\Images\GitHub-Mark\Vector\GitHub-Mark.eps" />
     <None Include="wwwroot\Images\twitter.png" />
   </ItemGroup>
-
+	
   <ItemGroup>
-    <Content Update="wwwroot\Content\SampleBlogPost.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+  	<Content Update="wwwroot\Content\*">
+  	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+  	</Content>
+	  
+  	<Content Update="wwwroot\_redirects">
+  		<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+  	</Content>
   </ItemGroup>
-
-	<ItemGroup>
-		<Content Update="wwwroot\_redirects">
-			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-		</Content>
-	</ItemGroup>
-
 </Project>
