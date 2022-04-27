@@ -12,21 +12,20 @@
         </div>
     </div>
 </div>
-<MudThemeProvider Theme="@_bitByBitTheme" />
-@*<MudThemeProvider />*@
+@*<MudThemeProvider Theme="@_bitByBitTheme" />*@
+<MudThemeProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
 
 @code 
 {
-    public MudTheme _bitByBitTheme = new MudTheme()
-    {
-        Palette = new Palette
-        {
-            OverlayDark = "#bdbdbdff",
-            //TextPrimary = "#ffffffff",
-            //TextSecondary = "#ff4081ff"
-        }
+    //public MudTheme _bitByBitTheme = new MudTheme()
+    //{
+    //    Palette = new Palette
+    //    {
+    //        OverlayDark = "#bdbdbdff",
+            
+    //    }
     };
 }
 
